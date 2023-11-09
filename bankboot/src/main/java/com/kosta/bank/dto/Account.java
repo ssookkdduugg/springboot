@@ -20,9 +20,11 @@ public class Account {
 			balance += money;
 		}
 	}
-	public void withdraw(Integer money) {
+	public void withdraw(Integer money) throws Exception {
 		if(balance>=money) {
 			balance -= money;
+		} else {
+			throw new Exception("잔액이 부족합니다.");
 		}
 	}
 	public String getId() {
@@ -55,6 +57,15 @@ public class Account {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-	
+
+/*
+CREATE TABLE account(
+   id VARCHAR(100) PRIMARY KEY,
+   NAME VARCHAR(100),
+   balance INT,
+   TYPE VARCHAR(100),
+   grade VARCHAR(100)
+); 
+*/
 	
 }

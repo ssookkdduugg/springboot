@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 						
-<mapper namespace="mapper.member">
+<mapper namespace="com.kosta.bank.dao.MemberDao">
 	<select id="selectMember" parameterType="String" resultType="com.kosta.bank.dto.Member">
 		<![CDATA[
 			select * from member where id=#{id}		
